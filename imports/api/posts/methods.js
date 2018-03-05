@@ -11,7 +11,6 @@ Meteor.methods({
     },
 
     'post.edit' (_id, post) {
-        console.log(_id, post);
         Posts.update(_id, {
             $set: {
                 title: post.title,

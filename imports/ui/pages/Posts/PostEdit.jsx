@@ -9,8 +9,6 @@ export default class PostEdit extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props);
-
         Meteor.call('post.get', this.props.match.params._id, (err, post) => {
             this.setState({post});
         });
