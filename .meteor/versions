@@ -2,7 +2,6 @@ accounts-base@1.4.2
 accounts-password@1.5.1
 aldeed:collection2-core@2.1.2
 allow-deny@1.1.0
-autopublish@1.0.7
 autoupdate@1.4.0
 babel-compiler@7.0.5
 babel-runtime@1.2.2
@@ -35,7 +34,6 @@ html-tools@1.0.11
 htmljs@1.0.11
 http@1.4.0
 id-map@1.1.0
-insecure@1.0.7
 launch-screen@1.1.1
 livedata@1.0.18
 localstorage@1.2.0
