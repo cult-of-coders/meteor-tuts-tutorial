@@ -27,6 +27,8 @@ export default class Login extends React.Component {
                                placeholder="Email"/>
 
                     <AutoField name="password" type="password" placeholder="Password"/>
+
+                    <button type="submit">Login</button>
                 </AutoForm>
             </div>
         )
