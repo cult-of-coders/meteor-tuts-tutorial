@@ -1,11 +1,8 @@
 import {Meteor} from 'meteor/meteor'
 import {Posts} from '/db';
-import Security from '/imports/api/security';
 
 Meteor.methods({
     'post.create'(post) {
-        Security.checkLoggedIn(this.userId);
-        post.userId = this.userId;
         Posts.insert(post);
     },
 
@@ -13,17 +10,17 @@ Meteor.methods({
         return Posts.find().fetch();
     },
 
-    'post.edit' (_id, postData) {
-        Posts.update({_id: _id, userId: this.userId}, {
+    'post.edit' (_id, post) {
+        Posts.update(_id, {
             $set: {
-                title: postData.title,
-                description: postData.description
+                title: post.title,
+                description: post.description
             }
         });
     },
 
     'post.remove' (_id){
-        Posts.remove({_id: _id, userId: this.userId});
+        Posts.remove(_id);
     },
 
     'post.get' (_id) {
